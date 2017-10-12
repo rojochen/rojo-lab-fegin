@@ -12,7 +12,7 @@ public class UserController {
     @Autowired
     UserFeignService userFeignService;
 
-    @RequestMapping(value="/user/{userEntryID}", method=RequestMethod.GET) 
+    @RequestMapping(value="/users/{userEntryID}", method=RequestMethod.GET) 
     public String getUserEntry(@PathVariable Long userEntryID) {
         // 通过HTTP调用远程服务
         return userFeignService.getUserEntry(userEntryID);
